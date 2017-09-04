@@ -1,0 +1,17 @@
+#!/bin/bash
+
+docker_wrapper_logs(){
+  local line=$1; shift
+
+  if [ -z "$line" ]; then
+    line=-100
+  fi
+
+  if [ -z "$DOCKER_WRAPPER_LOGS_TARGET" ]; then
+    echo '$DOCKER_WRAPPER_LOGS_TARGET is empty'
+  else
+    "$DOCKER_WRAPPER_LOGS_TARGET" logs | tail "$line"
+  fi
+}
+
+docker_wrapper_logs "$@"
