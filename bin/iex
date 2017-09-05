@@ -4,10 +4,9 @@ docker run \
   --rm \
   -u 1000:1000 \
   -w $(pwd) \
-  $(docker_wrapper_home) \
   $(docker_wrapper_tty) \
   $(docker_wrapper_volumes) \
   "${docker_wrapper_envs[@]}" \
   $(docker_wrapper_image elixir) \
-  iex "${docker_wrapper_args[@]}" \
+  iex "$@" \
 ;
