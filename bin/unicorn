@@ -1,6 +1,6 @@
 #!/bin/bash
 . docker-wrapper.sh
-docker_wrapper_server puma "$@"
+docker_wrapper_server unicorn "$@"
 if [ "$docker_wrapper_server_cmd" == start ]; then
   docker run \
     -d \
@@ -11,6 +11,6 @@ if [ "$docker_wrapper_server_cmd" == start ]; then
     $(docker_wrapper_volumes) \
     "${docker_wrapper_envs[@]}" \
     $(docker_wrapper_image ruby) \
-    $DOCKER_WRAPPER_RBENV_EXEC bundle exec puma -C $APP_ROOT/config/puma.rb \
+    $DOCKER_WRAPPER_RBENV_EXEC bundle exec unicorn -c $APP_ROOT/config/unicorn.rb \
   ;
 fi

@@ -9,5 +9,5 @@ docker run \
   $(docker_wrapper_volumes) \
   "${docker_wrapper_envs[@]}" \
   $(docker_wrapper_image ruby) \
-  bundle exec rails "$@" \
+  $DOCKER_WRAPPER_RBENV_EXEC bundle exec rails "$@" \
 ;

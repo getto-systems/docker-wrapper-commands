@@ -1,16 +1,14 @@
 #!/bin/bash
 . docker-wrapper.sh
-docker_wrapper_server puma "$@"
+docker_wrapper_server redis "$@"
 if [ "$docker_wrapper_server_cmd" == start ]; then
   docker run \
     -d \
-    -u 1000:1000 \
     -w $APP_ROOT \
-    -e BUNDLE_PATH=$APP_ROOT/vendor/bundle \
     $(docker_wrapper_server_name) \
     $(docker_wrapper_volumes) \
     "${docker_wrapper_envs[@]}" \
-    $(docker_wrapper_image ruby) \
-    $DOCKER_WRAPPER_RBENV_EXEC bundle exec puma -C $APP_ROOT/config/puma.rb \
+    $(docker_wrapper_image redis) \
+    redis-server \
   ;
 fi

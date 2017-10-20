@@ -8,5 +8,5 @@ docker run \
   $(docker_wrapper_volumes) \
   "${docker_wrapper_envs[@]}" \
   $(docker_wrapper_image ruby) \
-  irb "$@" \
+  $DOCKER_WRAPPER_RBENV_EXEC irb "$@" \
 ;
