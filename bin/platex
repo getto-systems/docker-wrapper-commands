@@ -2,9 +2,11 @@
 . docker-wrapper.sh
 docker_wrapper_docker run \
   --rm \
-  -it \
   -u 1000:1000 \
+  -w $(pwd) \
+  $(docker_wrapper_tty) \
   $(docker_wrapper_volumes) \
   "${docker_wrapper_envs[@]}" \
-  $(docker_wrapper_image certbot) \
+  $(docker_wrapper_image tex) \
+  platex "$@" \
 ;

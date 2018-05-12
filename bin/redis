@@ -2,7 +2,7 @@
 . docker-wrapper.sh
 docker_wrapper_server redis "$@"
 if [ "$docker_wrapper_server_cmd" == start ]; then
-  docker run \
+  docker_wrapper_docker run \
     -d \
     -w $APP_ROOT \
     $(docker_wrapper_server_name) \
