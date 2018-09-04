@@ -3,6 +3,7 @@
 docker_wrapper_docker run \
   --rm \
   -u 1000:1000 \
+  -e RUSTUP_HOME=~/.rustup \
   -w $(pwd) \
   $(docker_wrapper_tty) \
   $(docker_wrapper_volumes) \
