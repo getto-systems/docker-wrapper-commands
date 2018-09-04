@@ -6,9 +6,9 @@ if [ "$docker_wrapper_server_cmd" == start ]; then
     -d \
     -w $APP_ROOT \
     $(docker_wrapper_server_name) \
-    $(docker_wrapper_volumes) \
     "${docker_wrapper_envs[@]}" \
     $(docker_wrapper_image redis) \
     redis-server \
   ;
+    #$(docker_wrapper_volumes) \
 fi
