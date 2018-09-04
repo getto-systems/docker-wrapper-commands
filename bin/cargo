@@ -3,11 +3,13 @@
 docker_wrapper_docker run \
   --rm \
   -u 1000:1000 \
+  -e USER=$USER \
   -e RUSTUP_HOME=~/.rustup \
+  -e CARGO_HOME=~/.cargo \
   -w $(pwd) \
   $(docker_wrapper_tty) \
   $(docker_wrapper_volumes) \
   "${docker_wrapper_envs[@]}" \
   $(docker_wrapper_image rust) \
-  rustc "$@" \
+  cargo "$@" \
 ;
