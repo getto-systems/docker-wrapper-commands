@@ -1,0 +1,18 @@
+#!/bin/bash
+
+docker_wrapper_app(){
+  local cmd=$1; shift
+
+  if [ -z "$cmd" ]; then
+    cmd=restart
+  fi
+
+  if [ -z "$DOCKER_WRAPPER_TARGET" ]; then
+    echo '$DOCKER_WRAPPER_TARGET is empty'
+    return
+  fi
+
+  "$DOCKER_WRAPPER_TARGET" $cmd
+}
+
+docker_wrapper_app "$@"
