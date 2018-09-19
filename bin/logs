@@ -3,14 +3,20 @@
 docker_wrapper_logs(){
   local line=$1; shift
 
+  local target=$DOCKER_WRAPPER_LOGS_TARGET
+
   if [ -z "$line" ]; then
     line=-100
   fi
 
-  if [ -z "$DOCKER_WRAPPER_LOGS_TARGET" ]; then
-    echo '$DOCKER_WRAPPER_LOGS_TARGET is empty'
+  if [ -z "$target" ]; then
+    target=$DOCKER_WRAPPER_TARGET
+  fi
+
+  if [ -z "$target" ]; then
+    echo '$DOCKER_WRAPPER_LOGS_TARGET or $DOCKER_WRAPPER_TARGET is empty'
   else
-    "$DOCKER_WRAPPER_LOGS_TARGET" logs | tail "$line"
+    "$target" logs | tail "$line"
   fi
 }
 

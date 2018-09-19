@@ -12,7 +12,7 @@ docker_wrapper_app(){
     return
   fi
 
-  "$DOCKER_WRAPPER_TARGET" $cmd
+  "$DOCKER_WRAPPER_TARGET" "$cmd"
 }
 
 docker_wrapper_app "$@"
