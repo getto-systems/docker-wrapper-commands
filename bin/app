@@ -7,12 +7,12 @@ docker_wrapper_app(){
     cmd=restart
   fi
 
-  if [ -z "$DOCKER_WRAPPER_TARGET" ]; then
-    echo '$DOCKER_WRAPPER_TARGET is empty'
+  if [ -z "$DOCKER_WRAPPER_APP_TARGET" ]; then
+    echo '$DOCKER_WRAPPER_APP_TARGET is empty'
     return
   fi
 
-  "$DOCKER_WRAPPER_TARGET" "$cmd"
+  "$DOCKER_WRAPPER_APP_TARGET" "$cmd"
 }
 
 docker_wrapper_app "$@"
