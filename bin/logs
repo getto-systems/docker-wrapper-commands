@@ -10,11 +10,11 @@ docker_wrapper_logs(){
   fi
 
   if [ -z "$target" ]; then
-    target=$DOCKER_WRAPPER_TARGET
+    target=$DOCKER_WRAPPER_APP_TARGET
   fi
 
   if [ -z "$target" ]; then
-    echo '$DOCKER_WRAPPER_LOGS_TARGET or $DOCKER_WRAPPER_TARGET is empty'
+    echo '$DOCKER_WRAPPER_LOGS_TARGET or $DOCKER_WRAPPER_APP_TARGET is empty'
   else
     "$target" logs | tail "$line"
   fi
