@@ -9,6 +9,6 @@ if [ "$docker_wrapper_server_cmd" == start ]; then
     $(docker_wrapper_volumes) \
     "${docker_wrapper_envs[@]}" \
     $(docker_wrapper_image nginx) \
-    nginx -g "daemon off;" -c "$DOCKER_WRAPPER_NGINX_CONF_PATH" \
+    nginx -g "daemon off;" -c "${DOCKER_WRAPPER_NGINX_CONF_PATH:-$APP_ROOT/nginx.conf}" \
   ;
 fi
