@@ -4,7 +4,6 @@ docker_wrapper_docker run \
   --rm \
   -u 1000:1000 \
   -w $(pwd) \
-  -e BUNDLE_PATH=$APP_ROOT/vendor/bundle \
   $(docker_wrapper_tty) \
   $(docker_wrapper_volumes) \
   "${docker_wrapper_envs[@]}" \
