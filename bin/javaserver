@@ -1,0 +1,15 @@
+#!/bin/bash
+. docker-wrapper.sh
+docker_wrapper_server javaserver "$@"
+if [ "$docker_wrapper_server_cmd" == start ]; then
+  docker_wrapper_docker run \
+    -d \
+    -u 1000:1000 \
+    -w $APP_ROOT \
+    $(docker_wrapper_server_name) \
+    $(docker_wrapper_volumes) \
+    "${docker_wrapper_envs[@]}" \
+    $(docker_wrapper_image openjdk) \
+    ${DOCKER_WRAPPER_JAVASERVER_CMD:-jshell} \
+  ;
+fi
