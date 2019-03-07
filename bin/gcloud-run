@@ -7,6 +7,6 @@ docker_wrapper_docker run \
   $(docker_wrapper_tty) \
   $(docker_wrapper_volumes) \
   "${docker_wrapper_envs[@]}" \
-  $(docker_wrapper_image mysql) \
-  sh "$@" \
+  $(docker_wrapper_image google/cloud-sdk) \
+  "$@" \
 ;
