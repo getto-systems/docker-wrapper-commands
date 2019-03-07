@@ -1,3 +1,7 @@
+# Version : 0.4.0
+
+add: kubectl
+
 # Version : 0.3.0
 
 refactor: command name
