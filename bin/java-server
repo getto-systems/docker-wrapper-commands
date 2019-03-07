@@ -1,6 +1,6 @@
 #!/bin/bash
 . docker-wrapper.sh
-docker_wrapper_server javaserver "$@"
+docker_wrapper_server java "$@"
 if [ "$docker_wrapper_server_cmd" == start ]; then
   docker_wrapper_docker run \
     -d \
