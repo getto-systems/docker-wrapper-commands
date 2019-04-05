@@ -1,3 +1,7 @@
+# Version : 0.8.0
+
+fix: sudo
+
 # Version : 0.7.0
 
 add: script
