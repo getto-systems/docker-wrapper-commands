@@ -2,7 +2,7 @@
 . docker-wrapper.sh
 docker_wrapper_server resque_worker "$@"
 if [ "$docker_wrapper_server_cmd" == start ]; then
-  docker_wrapper_docker run \
+  docker run \
     -d \
     -u 1000:1000 \
     -w $APP_ROOT \
