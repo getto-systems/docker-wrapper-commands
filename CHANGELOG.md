@@ -1,3 +1,7 @@
+# Version : 0.9.0
+
+add: ruby-watch
+
 # Version : 0.8.0
 
 fix: sudo
