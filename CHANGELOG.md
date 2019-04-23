@@ -1,3 +1,7 @@
+# Version : 0.10.0
+
+fix: server command
+
 # Version : 0.9.0
 
 add: ruby-watch
