@@ -10,6 +10,5 @@ if [ "$docker_wrapper_server_cmd" == start ]; then
     $(docker_wrapper_volumes) \
     "${docker_wrapper_envs[@]}" \
     $(docker_wrapper_image openjdk) \
-    ${DOCKER_WRAPPER_JAVASERVER_CMD:-jshell} \
   ;
 fi
