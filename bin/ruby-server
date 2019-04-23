@@ -10,6 +10,6 @@ if [ "$docker_wrapper_server_cmd" == start ]; then
     $(docker_wrapper_volumes) \
     "${docker_wrapper_envs[@]}" \
     $(docker_wrapper_image ruby) \
-    bundle exec ruby server.rb \
+    bundle exec ruby -Ilib server.rb \
   ;
 fi
