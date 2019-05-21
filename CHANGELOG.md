@@ -1,3 +1,7 @@
+# Version : 0.12.0
+
+fix: ruby-run
+
 # Version : 0.11.0
 
 add: gcloud
