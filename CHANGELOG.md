@@ -1,3 +1,7 @@
+# Version : 0.17.0
+
+fix: trivy options
+
 # Version : 0.16.0
 
 add: commands
