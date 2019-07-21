@@ -1,3 +1,7 @@
+# Version : 0.18.0
+
+fix: dockle option
+
 # Version : 0.17.0
 
 fix: trivy options
