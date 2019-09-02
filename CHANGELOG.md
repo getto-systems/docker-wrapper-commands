@@ -1,3 +1,11 @@
+# CHANGELOG
+
+## Version : 0.19.0
+
+- fix: gitlab-ci : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!42
+- add: gsutil : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!41
+- add: hugo commands : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!40
+
 # Version : 0.18.0
 
 fix: dockle option
