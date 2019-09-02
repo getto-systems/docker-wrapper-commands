@@ -1,0 +1,15 @@
+#!/bin/bash
+. docker-wrapper.sh
+docker_wrapper_server hugo "$@"
+if [ "$docker_wrapper_server_cmd" == start ]; then
+  docker run \
+    -d \
+    -u 1000:1000 \
+    -w $(pwd) \
+    $(docker_wrapper_server_name) \
+    $(docker_wrapper_volumes) \
+    "${docker_wrapper_envs[@]}" \
+    $(docker_wrapper_image hugo) \
+    hugo server $(DOCKER_WRAPPER_SERVER_ARGS_hugo) \
+  ;
+fi
