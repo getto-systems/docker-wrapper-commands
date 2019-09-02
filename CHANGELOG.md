@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.19.1
+
+- add: releaseignore : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!43
+
+
 ## Version : 0.19.0
 
 - fix: gitlab-ci : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!42
