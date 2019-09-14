@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.20.0
+
+- add: rust-run : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!44
+
+
 ## Version : 0.19.1
 
 - add: releaseignore : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!43
