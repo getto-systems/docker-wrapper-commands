@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version : 0.20.1
+
+- fix: gitlab-ci : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!46
+- fix: set-window-title : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!45
+
+
 ## Version : 0.20.0
 
 - add: rust-run : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!44
