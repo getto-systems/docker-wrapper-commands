@@ -14,7 +14,6 @@ if [ -z "$(docker_wrapper_container_is_running $background_container_name)" ]; t
     -w $(pwd) \
     -d \
     $(docker_wrapper_volumes) \
-    "${docker_wrapper_envs[@]}" \
     $(docker_wrapper_image golang) \
     tail -f /etc/os-release \
   > /dev/null 2>&1;
@@ -24,6 +23,7 @@ docker exec \
   -u 1000:1000 \
   -w $(pwd) \
   $(docker_wrapper_tty_without_attach) \
+  "${docker_wrapper_envs[@]}" \
   $background_container_name \
   gofmt "$@" \
 ;
