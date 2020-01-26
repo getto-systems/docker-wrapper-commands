@@ -1,12 +1,29 @@
 #!/bin/bash
 . docker-wrapper.sh
-docker run \
-  --rm \
+
+background_container_name=$(docker_wrapper_server_hostname)-gofmt
+
+if [ -z "$(docker_wrapper_container_is_running $background_container_name)" ]; then
+  if [ -z "$(docker_wrapper_container_is_exists $background_container_name)" ]; then
+    docker rm $background_container_name > /dev/null 2>&1
+  fi
+
+  docker run \
+    --name $background_container_name \
+    -u 1000:1000 \
+    -w $(pwd) \
+    -d \
+    $(docker_wrapper_volumes) \
+    "${docker_wrapper_envs[@]}" \
+    $(docker_wrapper_image golang) \
+    tail -f /etc/os-release \
+  > /dev/null 2>&1;
+fi
+
+docker exec \
   -u 1000:1000 \
   -w $(pwd) \
-  $(docker_wrapper_tty) \
-  $(docker_wrapper_volumes) \
-  "${docker_wrapper_envs[@]}" \
-  $(docker_wrapper_image golang) \
+  $(docker_wrapper_tty_without_attach) \
+  $background_container_name \
   gofmt "$@" \
 ;
