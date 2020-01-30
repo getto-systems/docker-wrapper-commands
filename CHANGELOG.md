@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## Version : 0.21.0
+
+- add: efm-langserver : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!55
+- fix: gofmt background container environment vars : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!54
+- fix: gofmt background container : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!52
+- add: go basic wrappers : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!51
+
+
 ## Version : 0.20.2
 
 - fix: gitlab-ci : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!49
