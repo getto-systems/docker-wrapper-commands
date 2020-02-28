@@ -1,0 +1,17 @@
+#!/bin/bash
+. docker-wrapper.sh
+docker_wrapper_server apache "$@"
+if [ "$docker_wrapper_server_cmd" == start ]; then
+  docker run \
+    -d \
+    -w $APP_ROOT \
+    $(docker_wrapper_server_name) \
+    $(docker_wrapper_volumes) \
+    "${docker_wrapper_envs[@]}" \
+    -e LANG=C \
+    -e APACHE_RUN_USER=${APACHE_RUN_USER} \
+    -e DB_USER=${DB_USER} \
+    $(docker_wrapper_image apache) \
+    apache2 -DFOREGROUND \
+  ;
+fi

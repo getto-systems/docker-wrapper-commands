@@ -1,0 +1,12 @@
+#!/bin/bash
+. docker-wrapper.sh
+docker run \
+  --rm \
+  -w $(pwd) \
+  $(docker_wrapper_tty) \
+  $(docker_wrapper_volumes) \
+  "${docker_wrapper_envs[@]}" \
+  -e APACHE_RUN_USER=${APACHE_RUN_USER} \
+  $(docker_wrapper_image apache) \
+  "$@" \
+;
