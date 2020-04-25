@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## Version : 0.22.0
+
+- add: envoy : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!61
+- fix: rustfmt : use background container : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!60
+- add: apache : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!59
+- fix: background container restarting : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!58
+- fix: efm-langserver : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!57
+
+
 ## Version : 0.21.0
 
 - add: efm-langserver : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!55
