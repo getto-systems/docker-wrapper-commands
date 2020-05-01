@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.23.0
+
+- add: python-run : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!63
+
+
 ## Version : 0.22.0
 
 - add: envoy : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!61
