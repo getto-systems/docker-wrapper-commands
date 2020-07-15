@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.24.0
+
+- fix: gitlabkci : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!65
+
+
 ## Version : 0.23.0
 
 - add: python-run : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!63
