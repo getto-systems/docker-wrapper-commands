@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Version : 0.25.0
+
+- fix: gitlab ci : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!67
+- version bumped: 0.24.0 : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!66
+- fix: gitlabkci : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!65
+
+
 ## Version : 0.24.0
 
 - fix: gitlabkci : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!65
