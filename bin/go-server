@@ -1,6 +1,10 @@
 #!/bin/bash
 . docker-wrapper.sh
-docker_wrapper_server golang "$@"
+
+service=$1; shift
+cmd=$1; shift
+
+docker_wrapper_server $service $cmd
 if [ "$docker_wrapper_server_cmd" == start ]; then
   docker run \
     -d \
@@ -10,6 +14,6 @@ if [ "$docker_wrapper_server_cmd" == start ]; then
     $(docker_wrapper_volumes) \
     "${docker_wrapper_envs[@]}" \
     $(docker_wrapper_image golang) \
-    go run main.go \
+    "$@" \
   ;
 fi
