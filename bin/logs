@@ -1,6 +1,12 @@
 #!/bin/bash
+. docker-wrapper.sh
 
 docker_wrapper_logs(){
+  if [ "$(LC_ALL=C type -t DOCKER_WRAPPER_LOGS)" == function ]; then
+    DOCKER_WRAPPER_LOGS
+    return
+  fi
+
   local line=$1; shift
 
   local target=$DOCKER_WRAPPER_LOGS_TARGET

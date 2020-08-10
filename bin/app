@@ -1,10 +1,16 @@
 #!/bin/bash
+. docker-wrapper.sh
 
 docker_wrapper_app(){
   local cmd=$1; shift
 
   if [ -z "$cmd" ]; then
     cmd=restart
+  fi
+
+  if [ "$(LC_ALL=C type -t DOCKER_WRAPPER_APP)" == function ]; then
+    DOCKER_WRAPPER_APP "$cmd" "$@"
+    return
   fi
 
   if [ -z "$DOCKER_WRAPPER_APP_TARGET" ]; then
