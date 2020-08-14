@@ -3,7 +3,7 @@
 
 docker_wrapper_logs(){
   if [ "$(LC_ALL=C type -t DOCKER_WRAPPER_LOGS)" == function ]; then
-    DOCKER_WRAPPER_LOGS
+    DOCKER_WRAPPER_LOGS "$@"
     return
   fi
 
