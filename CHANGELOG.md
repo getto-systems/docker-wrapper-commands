@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.28.0
+
+- fix: npm-server : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!73
+
+
 ## Version : 0.27.0
 
 - fix: command : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!71
