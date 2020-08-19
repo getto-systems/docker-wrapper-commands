@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.29.0
+
+- add: typescript commands : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!75
+
+
 ## Version : 0.28.0
 
 - fix: npm-server : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!73
