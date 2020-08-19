@@ -1,0 +1,2 @@
+#!/bin/bash
+$APP_ROOT/node_modules/.bin/tsfmt "$@"
