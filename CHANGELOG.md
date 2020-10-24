@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.31.0
+
+- add: ide : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!79
+
+
 ## Version : 0.30.0
 
 - add: theia-server : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!77
