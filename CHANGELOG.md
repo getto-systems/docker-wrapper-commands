@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.30.0
+
+- add: theia-server : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!77
+
+
 ## Version : 0.29.0
 
 - add: typescript commands : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!75
