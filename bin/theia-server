@@ -1,0 +1,17 @@
+#!/bin/bash
+. docker-wrapper.sh
+
+cmd=$1; shift
+
+docker_wrapper_server theia $cmd
+if [ "$docker_wrapper_server_cmd" == start ]; then
+  docker run \
+    -d \
+    -u 1000:1000 \
+    $(docker_wrapper_server_name) \
+    $(docker_wrapper_volumes) \
+    "${docker_wrapper_envs[@]}" \
+    $(docker_wrapper_image theia) \
+    "$@" \
+  ;
+fi
