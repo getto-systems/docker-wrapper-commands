@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version : 0.32.0
+
+- add: storybook : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!81
+
+
 ## Version : 0.31.0
 
 - add: ide : See merge request getto-systems-base/labo/shell/docker-wrapper-commands!79
